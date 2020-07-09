@@ -7,19 +7,18 @@
 
 % Places front text in the top left corner
 \cardfrontstyle{empty}
+\directlua{makecards = require("makeflashcards)}
+
+\newcommand*{\makeflashcards}{%
+  \directlua{%
+    makecards.MakeFlashCards()%
+            }%
+    }
+
 \begin{document}
 
 % Takes dictionary.csv and loads
 % arabic, english word pairs
-
-\directlua{makecards = require("makeflashcards")}
-
-\newcommand*{\makeflashcards}{%
-  \directlua{%
-    \makeflashcards.MakeFlashCards()%
-            }%
-    }
-
 \makeflashcards
 
 \end{document}
