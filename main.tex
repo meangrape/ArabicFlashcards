@@ -15,8 +15,10 @@
 \directlua{makecards = require("makeflashcards")}
 
 \newcommand*{\makeflashcards}{%
-  \directlua{makecards.MakeFlashCards()}%
-}
+  \directlua{%
+    \makeflashcards.MakeFlashCards()%
+            }%
+    }
 
 \makeflashcards
 

@@ -17,6 +17,5 @@ function MakeFlashCards()
                 "\\end{flashcard}\\smallskip")
     end
   end
-  
-return { makeflashcards = MakeFlashCards }
+  return { makeflashcards = MakeFlashCards }
 end
