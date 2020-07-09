@@ -1,0 +1,23 @@
+\documentclass[avery5388,grid]{flashcards}
+\usepackage{fontspec}
+\usepackage{luacode}
+\input{./fonts.tex}
+\input{./arabic_commands.tex}
+
+
+% Places front text in the top left corner
+\cardfrontstyle{empty}
+\begin{document}
+
+% Takes dictionary.csv and loads
+% arabic, english word pairs
+
+\directlua{makecards = require("makecards")}
+
+\newcommand*{\makeflashcards}{%
+  \directlua{makecards.MakeFlashCards()}%
+}
+
+\makeflashcards
+
+\end{document}
